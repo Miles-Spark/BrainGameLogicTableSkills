@@ -288,7 +288,6 @@ if 条件1 == true &&条件2 == true &&条件3 == true &&条件4 == true &&条�
 3. `<序号>` 从 1 开始，按当前关卡中转换出现顺序递增。
 4. 删除原动效指令下方单独的 `F` / `T` 标记行。
 5. 如果两个动效不连续，或物品类型不同，不自动合并。
-6. 对照示例验证：参考 `$SKILL_ROOT/references/example/test_fixed.md` 中动效组序号递增规律。
 
 #### 3.2.8 操作分支调用完成条件
 
@@ -384,7 +383,7 @@ unicli 命令超时设定为 60 秒。超时后记录失败原因并中止当前
 执行：
 
 ```bash
-unicli exec Level.InitializeGameLevel "{\"LevelId\":<LevelId>}" --json
+unicli exec Level.InitializeGameLevel --LevelId <LevelId> --json
 ```
 
 成功条件：
@@ -400,7 +399,7 @@ unicli exec Level.InitializeGameLevel "{\"LevelId\":<LevelId>}" --json
 初始化成功后执行：
 
 ```bash
-unicli exec Level.CreateLevelLogicBlock "{\"LevelId\":<LevelId>}" --json
+unicli exec Level.CreateLevelLogicBlock --LevelId <LevelId> --json
 ```
 
 成功条件：
