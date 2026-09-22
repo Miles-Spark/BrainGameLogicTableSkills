@@ -23,7 +23,7 @@
    - 操作114未完成
      -  xxx指令
    - 操作114已完成
-     - xxx指令  这样的结构时，首先要找到提示114所在的分支，在改分支的指令层中添加不重复的条件指令，然后将if判断改为 if 条件xx == true, if 条件xx == false;
+     - xxx指令  这样的结构时，首先要找到提示114所在的分支，在改分支的指令层中添加不重复的条件指令，然后将if判断改为 if 条件xx == true, if 条件xx == false; 并且添加配套的end指令
 
    例如 if 
 
@@ -33,8 +33,10 @@
      - 动效BestFriend_1_IdleB  应该改为如下
      - if 条件0 == false
        - 动效BestFriend_1_Idle
+       - end
      - if 条件0 == true
        - 动效BestFriend_1_IdleB 
+       - end
 
 6. 当出现指令层出现某某物体设置为可点击，某某物体解锁碰撞框，都改为启用某某物体。例如WaterTap_1设置为可点击  应改为 启用WaterTap_1
 
